@@ -16,6 +16,7 @@ __pycache__
 #Enviroment and Idea files
 .idea
 venv/
+venv/pyvenv.cfg
 
 
 # Visual Studio Code # 
