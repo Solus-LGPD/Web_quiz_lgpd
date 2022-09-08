@@ -178,8 +178,8 @@ body{
 }
 
 .form_title  h1 {
-  font-size: 3.5rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 .form_img img {
@@ -393,12 +393,14 @@ button {
 ================================================== */
 @media screen and (max-width: 1399.98px) {
   .form_title h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    font-weight: 400;
   }
 }
 @media screen and (max-width: 1199.98px) {
   .form_title h1 {
     font-size: 3rem;
+    font-weight: 400;
   }
 
   .form_items label {

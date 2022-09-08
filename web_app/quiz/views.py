@@ -64,6 +64,7 @@ def login(request):
         if log.verificarLogin(email, senha) != 0:
             context = {
                 'id_usuario': log.verificarLogin(email, senha),
+                'perguntas': perguntas,
                 'fail' : fail
             }
             return render(request, 'quiz/quiz.html', context)
