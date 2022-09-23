@@ -27,13 +27,25 @@ class Pontuacoes:
         """
         for pos, c in enumerate(lista_respostas):  # Esse for anda pela lista respostas_qtd e também pelo seu indice
             if c == 0: 
-                self.__pontuacao_parcial += 0
+                if self.perguntas_pesos.get(id=pos+1).pesos == 1:
+                    self.__pontuacao_parcial += 0
+                else:
+                    self.__pontuacao_parcial += 0
             elif c == 1:
-                self.__pontuacao_parcial += 0.25
+                if self.perguntas_pesos.get(id=pos+1).pesos == 1:
+                    self.__pontuacao_parcial += 0.25
+                else:
+                    self.__pontuacao_parcial += 0.50
             elif c == 2: 
-                self.__pontuacao_parcial += 0.50
+                if self.perguntas_pesos.get(id=pos+1).pesos == 1:
+                    self.__pontuacao_parcial += 0.50
+                else:
+                    self.__pontuacao_parcial += 1
             elif c == 3:
-                self.__pontuacao_parcial += 1
+                if self.perguntas_pesos.get(id=pos+1).pesos == 1:
+                    self.__pontuacao_parcial += 1
+                else:
+                    self.__pontuacao_parcial += 2
 
     # Retorna o valor de estrelas
     def get_estrelas(self):
