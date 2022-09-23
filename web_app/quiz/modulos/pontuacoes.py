@@ -15,7 +15,9 @@ class Pontuacoes:
             -> Função utilizada para calcular a quantidade de estrelas baseada no teste de adequação a LPGD.
         :return: Não retorna nada.
         """
-        self.__estrelas = (5 * self.__pontuacao_parcial) / (9 * 2)  # Calculo das estrelas
+        numero_de_perguntas = 8
+
+        self.__estrelas = (5 * self.__pontuacao_parcial) / numero_de_perguntas # Calculo das estrelas
 
     # Função utilizada para calcular a pontuação parcial do usuário (100% = 2 pontos, 50% = 1 ponto)
     def calculo_pontuacao_parcial(self, lista_respostas) -> None:
@@ -24,23 +26,18 @@ class Pontuacoes:
         :return: Não retorna nada
         """
         for pos, c in enumerate(lista_respostas):  # Esse for anda pela lista respostas_qtd e também pelo seu indice
-            if c == 1 or c == 0:  # Verifica as respostas de 50%
-                if self.perguntas_pesos.get(id=pos+1).pesos == 1:
-                    self.__pontuacao_parcial += 1
-                else:
-                    self.__pontuacao_parcial += 2
-            elif c == 2:  # Verifica a resposta de 100%
-                if self.perguntas_pesos.get(id=pos+1).pesos == 1:
-                    self.__pontuacao_parcial += 2
-                else:
-                    self.__pontuacao_parcial += 3
+            if c == 0: 
+                self.__pontuacao_parcial += 0
+            elif c == 1:
+                self.__pontuacao_parcial += 0.25
+            elif c == 2: 
+                self.__pontuacao_parcial += 0.50
+            elif c == 3:
+                self.__pontuacao_parcial += 1
 
     # Retorna o valor de estrelas
     def get_estrelas(self):
-        if(self.__estrelas > 6):
-            return 6
-        else:
-            return self.__estrelas
+        return self.__estrelas
 
     # Retorna o valor da pontuação parcial
     def get_pontuacao_parcial(self):
