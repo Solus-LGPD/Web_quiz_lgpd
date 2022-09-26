@@ -22,7 +22,7 @@ def quiz(request, id_usuario):
 
     if request.method == 'POST':
         lista_respostas = []
-        for v in range(1, 10):
+        for v in range(1, 8):
             resposta = (int(request.POST.get(f'stp_{v}_valor_selecao', None)))
             lista_respostas.append(resposta)
             q = Questao(data_de_envio=datetime.now(), resposta=resposta, empresa=Cadastro.objects.get(pk=id_usuario), pergunta=Pergunta.objects.get(pk=v), opcao_resposta=OpcaoResposta.objects.get(pk=resposta + 1))
