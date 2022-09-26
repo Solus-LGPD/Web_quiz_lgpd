@@ -13,7 +13,6 @@ class Cadastro(models.Model):
 
     nome_empresa = models.CharField(max_length=100, blank=False, null=False)
     nome_colaborador = models.CharField(max_length=100, blank=False, null=False)
-    funcao_colaborador = models.CharField(max_length=120)
     email_colaborador = models.EmailField(max_length=100, unique=True)
     whatsapp_colaborador = models.CharField(max_length=25, unique=True)
     senha = models.CharField(max_length=30, blank=False, null=False)
@@ -26,7 +25,7 @@ class Pergunta(models.Model):
         return self.pergunta
 
     pergunta = models.CharField(max_length=300, unique=True)
-    pesos = models.IntegerField(default=False, null=False)
+    pesos = models.FloatField(default=False, null=False)
     
 
 class OpcaoResposta(models.Model):

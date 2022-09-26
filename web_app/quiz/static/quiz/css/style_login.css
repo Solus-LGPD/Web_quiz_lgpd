@@ -148,7 +148,7 @@ body {
     align-items: center;
     padding: 5px;
 }
-#createAccount p:nth-child(9){
+#createAccount p:nth-child(8){
     display: flex;
     border: none;
     justify-content: center;
@@ -156,7 +156,7 @@ body {
 #createAccount label{
     display: none;
 }
-#createAccount p:nth-child(9) label{
+#createAccount p:nth-child(8) label{
     display: block;
 }
 
@@ -188,7 +188,7 @@ body {
     font-weight: bold;
 }
 
-#createAccount p:nth-child(9){
+#createAccount p:nth-child(8){
     display: flex;
     flex-direction: row;
     gap: 15px;

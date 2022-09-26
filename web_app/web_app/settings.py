@@ -80,6 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'lgpdquiz',
         'USER': 'root',
+        "OPTIONS": {"charset": "utf8mb4"},
         'PASSWORD': 'Inside102030.',
         'HOST': 'localhost',
         'PORT': '3306',
