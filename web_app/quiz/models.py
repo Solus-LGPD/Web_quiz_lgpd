@@ -1,6 +1,3 @@
-from audioop import mul
-from pyexpat import model
-from tkinter import CASCADE
 from django.db import models
 
 

@@ -8,6 +8,7 @@
     <title>LGPD Quiz - Login</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'quiz/css/style_login.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'quiz/images/solus_favicon.png' %}">
 </head>
 <body>
 
@@ -24,9 +25,6 @@
                 <input type="password" class="form__input" id="senha" name="senha" autofocus placeholder="Senha">
             </div>
             <button class="form__button" type="submit">Entrar</button>
-            <p class="form__text">
-                <a href="#" class="form__link">Esqueceu a senha?</a>
-            </p>
             <p class="form__text">
                 <a class="form__link" href="{% url 'cadastro' %}" id="linkCreateAccount">Não tem uma conta? Crie uma</a>
             </p>

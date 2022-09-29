@@ -7,25 +7,26 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{% static 'quiz/css/style_login.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'quiz/images/solus_favicon.png' %}">
 </head>
 <body>
     <div class="container">
   <!-- Register Form -->
         <h1>Cadastro</h1>
         <form class="form" id="createAccount" action="{% url 'cadastro' %}" method="POST">
-          {% csrf_token %}
+        {% csrf_token %}
             {{ form.as_p }}
 
             <button class="form__button" type="submit">Cadastrar</button>
         </form>
         <div id="form_msg">{{ human }}</div>
         <div id="ps-error-msg">{{ ps_token }}</div>
-        <p class="form__text">
+        <div class="form__text">
             <a class="form__link" href="{% url 'termo' %}" target="_blank">Leia os termos de uso</a>
-        </p>
-        <p class="form__text">
+        </div>
+        <div class="form__text">
             <a class="form__link" href="{% url 'login' %}" id="linkLogin">Já possui uma conta? Acesse</a>
-        </p>
+        </div>
     </div>
     
 
