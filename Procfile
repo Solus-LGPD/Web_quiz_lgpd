@@ -1,0 +1,1 @@
+web: gunicorn Web_quiz_lgpd.wsgi --log-file -
